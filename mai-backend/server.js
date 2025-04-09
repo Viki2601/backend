@@ -13,6 +13,8 @@ app.use(express.json());
 
 // Routes
 app.use("/api", jobRoutes);
+app.use('/uploads', express.static('uploads'));
+
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
